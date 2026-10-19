@@ -25,7 +25,10 @@ class Queue {
   }
 
   enqueue(value) {
-    const node = new ListNode(value);
+    const node = {
+      value,
+      next: null,
+    };
     if (this.head === null) {
       this.head = node;
       this.tail = node;
